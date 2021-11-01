@@ -555,9 +555,9 @@ JzonValue* jzon_get(JzonValue* object, const char* key)
     
     uint64_t key_hash = hash_str(key);
 
-    unsigned first = 0;
-    unsigned last = object->size - 1;
-    unsigned middle = (first + last) / 2;
+    int32_t first = 0;
+    int32_t last = object->size - 1;
+    int32_t middle = (first + last) / 2;
 
     while (first <= last)
     {
